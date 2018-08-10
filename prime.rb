@@ -1,8 +1,8 @@
 def prime?(y)
   new_array = []
-  (2..y-1).Array.each |z| do
+  array = (2..y-1).to_a
+  array.each do |z|
     new_array << y % z 
-    new_array
   end 
-  new_array.include?(0)
+  !new_array.include?(0) && y>1
 end 
